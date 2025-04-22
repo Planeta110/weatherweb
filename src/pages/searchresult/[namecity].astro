@@ -1,0 +1,17 @@
+---
+export const prerender = false;
+
+const { namecity } = Astro.params;
+const province = Astro.url.searchParams.get("province");
+
+import Main from "../../components/search/main.jsx";
+import Layout from "../../layouts/Searchlayout.astro";
+
+---
+
+<Layout title={`${namecity} | Weather`}>
+  <main class="pt-20 h-full w-full">
+    <Main city={namecity} province={province} client:load />
+  </main>
+</Layout>
+

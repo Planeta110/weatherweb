@@ -176,3 +176,5 @@ Permission is hereby granted, free of charge, to use (with limitations below), c
 3. The images used are not from the author Planeta110, they are governed by their own explicit license. More information about the licenses for these images can be found on the pages where they appear.
 4. With modifications, the same license must be shared, and if modified, attribution to the author (Planeta110) must be included.
 5. The weather data obtained from the requests are from Open Mateo.
+
+

@@ -1,0 +1,19 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Page not found">
+  <main class="w-full h-full flex flex-col items-center justify-center">
+    <h1 class="font-bold text-3xl text-center">404 | Error page not found</h1>
+    <button id="gotohome" class="mt-10 p-4 bg-neutral-800 text-white border-[2px] rounded-[12px] cursor-pointer border-neutral-200">Go to Home</button>
+  </main>
+</Layout>
+
+<script>
+  const gohomebutton = document.getElementById("gotohome");
+  if (gohomebutton) {
+    gohomebutton.addEventListener("click", () => {
+        window.location.href = "/";
+    });
+  }
+</script>

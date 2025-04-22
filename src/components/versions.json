@@ -1,0 +1,9 @@
+{
+  "lastupdate": {
+    "version": "Alpha 1.0",
+    "mdfile": "lastversion"
+  },
+  "versions": [
+    { "version": "1.0 Alpha", "status": "Testing", "mdfile": "1version" }
+  ]
+}

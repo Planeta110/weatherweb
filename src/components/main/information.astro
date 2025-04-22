@@ -1,0 +1,102 @@
+<div
+  class="mt-64 md:mt-20 w-[90%] h-auto items-center rounded-[4px] shadow-2xl flex flex-col md:w-[750px] p-4 bg-neutral-200 border-[1px] border-neutral-600"
+>
+  <h1 class="font-extrabold text-3xl max-w-[500px] text-center mt-2">
+    Get the best <b
+      class="bg-emerald-500 p-1 rounded-[6px] leading-relaxed text-white text-shadow-2xs"
+      >free</b
+    >
+    <b
+      class="text-white bg-gradient-to-r rounded-[6px] from-cyan-500 to-blue-300 p-1"
+      >weather</b
+    > information.
+  </h1>
+  {/*  <div class="wrapper"> */}
+  {/*    <div class="card" id="target"> */}
+  {/*       */}
+  {/*      <div class="mask" id="mask"> */}
+  {/*        <h1 class="text-white">HOLa</h1> */}
+  {/*      </div> */}
+  {/*      <h1 class="text-black">HOla</h1> */}
+  {/*    </div> */}
+  {/*  </div> */}
+  <p class="text-center mt-5 max-w-[600px]">
+    Access real-time weather updates from a wide range of locations. Stay
+    informed with accurate forecasts for the next few hours and the days ahead.
+  </p>
+  <img
+    id="imagenimg"
+    alt="Imagen demostración"
+    src="/demostration.jpg"
+    class="cursor-pointer rounded-[12px] shadow-2xl h-[60%] md:h-[290px] md:w-[470px] w-[90%] mt-4 md:mt-10"
+  />
+  <a href="/about" class="mt-3">About page</a>
+  <div class="bottom-3"></div>
+</div>
+
+<script is:inline>
+  const imagenimg = document.getElementById("imagenimg");
+
+  imagenimg?.addEventListener("click", () => {
+    window.location.href = "/searchresult/Huesca?province=Aragon"
+  })
+</script>
+{
+  /* <style>
+  .wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid transparent;
+  }
+
+  .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    mask-image: radial-gradient(
+      circle 20px at center,
+      white 0%,
+      transparent 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      circle 20px at center,
+      white 0%,
+      transparent 100%
+    );
+    background: white;
+    border: 2px solid rgb(239, 239, 239);
+    mix-blend-mode: lighten;
+    opacity: 1;
+    transition: mask-position 0.1s;
+  }
+</style>*/
+}
+
+{
+  /*   /}<script>
+//  const mask = document.getElementById("mask");
+//  const card = document.getElementById("target");
+//  if (card && mask) {
+//    card.addEventListener("mousemove", (e) => {
+//      const rect = card.getBoundingClientRect();
+//      const x = e.clientX - rect.left;
+//      const y = e.clientY - rect.top;
+//      mask.style.maskImage = `radial-gradient(circle 40px at ${x}px ${y}px, white 0%, transparent 100%)`;
+//      mask.style.webkitMaskImage = `radial-gradient(circle 40px at ${x}px ${y}px, white 0%, transparent 100%)`;
+//    });
+//  }
+//</script>
+//*/
+}

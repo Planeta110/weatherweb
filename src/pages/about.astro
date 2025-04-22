@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Versions from "../components/versions.json";
+import Installandlastversion from "./installandlastversion.md";
+---
+
+<Layout title="About the project">
+  <main class="pt-20 flex flex-col w-full h-full text-black">
+    <div class="pl-2 md:pl-10 pt-5 md:pt-10">
+      <div class="flex flex-row items-center">
+        <h1
+          class="hover:text-cyan-800 font-bold hover:underline hover:text-3xl cursor-pointer text-2xl"
+        >
+          #
+        </h1>
+        <h1 class="text-2xl pl-2 font-extrabold">About this proyect</h1>
+      </div>
+      <p class="max-w-[90%] md:max-w-[1000px]">
+        This project was created with the goal of learning and improving my
+        skills in Astro. The current version is <b
+          class="text-white bg-gradient-to-r from-orange-500 to-amber-400 p-[2px] border-2 border-white rounded-[3px] font-bold"
+          >{Versions.lastupdate.version}</b
+        >. You can access the
+        <b class="underline cursor-pointer">Markdown file</b> for detailed information
+        about installation, usage, customization, and licensing. Please note that
+        the weather data obtained from API requests may contain inaccuracies, as
+        it relies on the free version of Open Mateo. This project is entirely non-commercial
+        and was developed solely for educational purposes.
+      </p>
+      <article class="mt-20 prose">
+        <Installandlastversion />
+      </article>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+</style>

@@ -1,0 +1,82 @@
+<main
+  class="w-full h-full pt-20 text-black flex flex-col items-center font-poppins"
+>
+  <h1
+    class="mt-28 font-bold text-5xl bg-gradient-to-r hover:bg-gradient-to-l hover:scale-105 transition-all text-white text-shadow-orange-100 p-3 rounded-[6px] border-2 border-neutral-200 from-amber-500 via-yellow-500 to-red-400"
+  >
+    Write a city
+  </h1>
+
+  <div class="mt-20 w-full flex flex-row justify-center items-center">
+    <input
+      id="inputsearchs"
+      type="text"
+      placeholder="Madrid"
+      class="border-[2px] rounded-r-[0px] p-4 w-[40%] md:w-[400px] h-12 rounded-full border-black"
+    />
+    <input
+      id="inputprovincys"
+      type="text"
+      placeholder="Provincia"
+      class="border-r-[2px] border-t-[2px] border-b-[2px] rounded-l-[0px] pr-11 p-4 w-[40%] md:w-[200px] h-12 rounded-full border-black"
+    />
+    <svg
+      id="buttonsearchs"
+      xmlns="http://www.w3.org/2000/svg"
+      width="22"
+      height="22"
+      fill="currentColor"
+      class="-left-10 relative cursor-pointer"
+      viewBox="0 0 16 16"
+    >
+      <path
+        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+      ></path>
+    </svg>
+  </div>
+  <p class="mt-8 text-center max-w-[400px]">Please make sure to write the names of cities and towns correctly — accents matter!</p>
+</main>
+
+<script is:inline>
+  let valuesearchs = "";
+  let valueprovincys = "";
+
+  const inputsearchs = document.getElementById("inputsearchs");
+  const inputprovincys = document.getElementById("inputprovincys");
+  const buttonsearchalls = document.getElementById("buttonsearchs");
+
+  inputsearchs?.addEventListener("input", (e) => {
+    valuesearchs = e.target.value;
+  });
+
+  inputprovincys?.addEventListener("input", (e) => {
+    valueprovincys = e.target.value;
+  });
+
+  buttonsearchalls?.addEventListener("click", () => {
+    if (valuesearchs === "") {
+      alert("Pleas write a city ");
+      return;
+    }
+    window.location.href = `/searchresult/${valuesearchs}?province=${valueprovincys}`;
+  });
+
+  inputsearchs?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      if (valuesearchs === "") {
+        alert("Pleas write a city ");
+        return;
+      }
+      window.location.href = `/searchresult/${valuesearchs}?province=${valueprovincys}`;
+    }
+  });
+  inputprovincys?.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      if (valuesearchs === "") {
+        alert("Pleas write a city ");
+        return;
+      }
+      window.location.href = `/searchresult/${valuesearchs}?province=${valueprovincys}`;
+    }
+  });
+</script>
